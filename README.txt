@@ -1,36 +1,36 @@
-AppleTechMac - versión corregida para Vercel
+AppleTechMac - reestructuración completa centrada en problemas del cliente
 
-POR QUÉ SALÍA HTTP 405:
-Vercel no ejecuta archivos PHP como contacto.php en un proyecto estático.
-El formulario anterior apuntaba a contacto.php, por eso no podía funcionar en Vercel.
+ENFOQUE:
+Problema -> preocupación -> solución -> prueba de experiencia -> CTA.
 
-FORMULARIO NUEVO:
-contacto.html -> JavaScript -> /api/contact -> SMTP de Webempresa -> soporte@kelatos.com
+HERO:
+La caja de información se mantiene en el lado izquierdo.
+El mensaje principal se centra en "¿Tu Mac no enciende y necesitas tus archivos?"
 
-Variables necesarias en Vercel:
-SMTP_HOST       = servidor SMTP que te indique Webempresa
-SMTP_PORT       = normalmente 465 (SSL) o 587 (STARTTLS)
-SMTP_SECURE     = true para 465 / false para 587
-SMTP_USER       = soporte@kelatos.com
-SMTP_PASS       = contraseña del buzón soporte@kelatos.com
-CONTACT_EMAIL   = soporte@kelatos.com (opcional; si no existe usa soporte@kelatos.com)
+PÁGINAS SEO POR PROBLEMA:
+- Mi Mac no enciende
+- Pantalla negra
+- Mac no carga
+- Mac mojado
+- Mac va lento
+- Mac enciende pero no arranca
+- Recuperar datos
+- Reparación Mac urgente
+- Archivos importantes dentro
 
-Después de añadir/cambiar variables: hacer Redeploy.
+FORMULARIO:
+Vercel /api/contact -> SMTP Webempresa -> soporte@kelatos.com
 
-PRUEBA:
-Abrir /api/contact
-Debe mostrar SMTP_HOST, SMTP_PORT, SMTP_USER y SMTP_PASS en true.
-
-SEO:
-Se han mejorado títulos, descripciones y canonical de home, servicios, modelos y páginas individuales.
-
-PRECIOS:
-Se añadió la sección general de familias:
-iMac, Mac mini, Mac Pro, MacBook, MacBook Air, MacBook Pro y MacBook Retina.
-Cada familia enlaza a su página; la página de precios no enumera los modelos exactos.
+VARIABLES COMPARTIDAS EN VERCEL:
+SMTP_HOST=cp7124.webempresa.eu
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=soporte@kelatos.com
+SMTP_PASS=[contraseña]
+CONTACT_EMAIL=soporte@kelatos.com
 
 Google Analytics:
 G-HSL4TYWB2J
 
-
-Ahora solo hay 7 páginas de modelos: iMac, Mac mini, Mac Pro, MacBook, MacBook Air, MacBook Pro y MacBook Retina. El menú incluye reparaciones frecuentes por familia.
+No se inventan cifras de reparaciones, años de experiencia ni número de reseñas.
+La sección de casos/vídeos queda preparada, pero no enlaza a un canal no proporcionado.
