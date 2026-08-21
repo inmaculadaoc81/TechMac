@@ -53,3 +53,47 @@ section{padding:82px 0}.soft{background:#eff7f8}.dark{background:var(--ink);colo
   .hero-copy h1{font-size:28px}
   .calendar iframe{height:900px}
 }
+
+/* Diagnóstico gratuito destacado en el hero */
+.free-diagnosis{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:fit-content;
+  max-width:100%;
+  margin:18px 0 4px;
+  padding:11px 16px;
+  border-radius:999px;
+  background:var(--cyan);
+  border:1px solid rgba(45,156,166,.28);
+  color:var(--ink);
+}
+.free-diagnosis>span{
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--teal);
+  color:#fff;
+  font-weight:900;
+}
+.free-diagnosis strong{
+  display:block;
+  color:var(--teal);
+  font-size:16px;
+  line-height:1.2;
+}
+.free-diagnosis small{
+  display:block;
+  margin-top:2px;
+  color:var(--ink2);
+  font-size:13px;
+}
+@media(max-width:580px){
+  .free-diagnosis{
+    width:100%;
+    border-radius:18px;
+  }
+}
