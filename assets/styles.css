@@ -21,3 +21,35 @@ section{padding:82px 0}.soft{background:#eff7f8}.dark{background:var(--ink);colo
 .map iframe{width:100%;height:340px;border:0;border-radius:26px}.footer{padding:46px 0;background:#061522;color:#d8e5eb}.footer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:28px}.footer .logo{background:#fff;padding:6px;border-radius:10px}.floatwa{position:fixed;right:20px;bottom:92px;width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;z-index:9998}.floatwa .wa-icon{width:31px;height:31px;margin:0}
 @media(max-width:900px){.navlinks{display:none}.hero-grid,.data-layout,.pickup-layout,.contact-grid{grid-template-columns:1fr}.hero-copy{order:1}.info{order:2}.problem-list,.flow,.proof-grid{grid-template-columns:1fr}.calendar iframe{height:860px}.footer-grid{grid-template-columns:1fr}}
 @media(max-width:580px){.wrap{width:min(100% - 24px,1180px)}.logo{width:205px}.hero{padding:38px 0 54px}.hero-copy h1{font-size:38px}.hero-actions,.formgrid{grid-template-columns:1fr}.wide,.full{grid-column:auto}section{padding:58px 0}.calendar iframe{height:920px}}
+
+/* Ajustes solicitados */
+.hero-copy h1{
+  font-size:clamp(28px,3.75vw,50px);
+}
+.hero-accent{
+  color:var(--teal);
+}
+.calendar{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:0!important;
+  box-shadow:none!important;
+  overflow:visible;
+}
+.calendar iframe{
+  width:100%;
+  height:700px;
+  border:0;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+  color-scheme:light;
+}
+@media(max-width:900px){
+  .calendar iframe{height:830px}
+}
+@media(max-width:580px){
+  .hero-copy h1{font-size:28px}
+  .calendar iframe{height:900px}
+}

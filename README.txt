@@ -1,13 +1,13 @@
 TechMac ONE PAGE - versión de prueba
 
-FORMULARIO DE PRUEBA:
-Configura en Vercel estas variables para que el formulario envíe usando el buzón de prueba:
+FORMULARIO:
+Configura en Vercel estas variables para usar el correo general:
 SMTP_HOST=cp7124.webempresa.eu
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=info@surface-reparacion-servicio-tecnico.info
+SMTP_USER=soporte@kelatos.com
 SMTP_PASS=[contraseña del buzón, SOLO en Vercel]
-CONTACT_EMAIL=info@surface-reparacion-servicio-tecnico.info
+CONTACT_EMAIL=soporte@kelatos.com
 
 La contraseña NO está incluida en el proyecto.
 
