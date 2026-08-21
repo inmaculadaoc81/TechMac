@@ -31,3 +31,6 @@ Cada familia enlaza a su página; la página de precios no enumera los modelos e
 
 Google Analytics:
 G-HSL4TYWB2J
+
+
+Ahora solo hay 7 páginas de modelos: iMac, Mac mini, Mac Pro, MacBook, MacBook Air, MacBook Pro y MacBook Retina. El menú incluye reparaciones frecuentes por familia.
