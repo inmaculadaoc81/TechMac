@@ -74,7 +74,7 @@ section{padding:82px 0}.soft{background:#eff7f8}.dark{background:var(--ink);colo
   gap:12px;
   width:fit-content;
   max-width:100%;
-  margin:18px 0 4px;
+  margin:18px 0 24px;
   padding:11px 16px;
   border-radius:999px;
   background:var(--cyan);
