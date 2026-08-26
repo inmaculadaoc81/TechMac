@@ -40,9 +40,15 @@ REVISIÓN (fixes aplicados):
   ahora WhatsApp vuelve a bottom:24px y el chat va en bottom:96px).
 - Añadida sección de contenido SEO propio (#guia), enlazada en el menú
   de escritorio y en el móvil.
-- Añadidos datos schema.org LocalBusiness (no existían), con el
-  teléfono realmente usado en los botones (+34 914 46 85 03, distinto
-  del que solo aparece como texto informativo en la caja de contacto).
+- Añadidos datos schema.org LocalBusiness (no existían). En esa
+  primera pasada se usó por error el teléfono de los botones
+  (+34 914 46 85 03, número de un bot de llamadas usado a propósito en
+  botones de varias webs de la familia) en vez del de la caja de
+  información. CORREGIDO en una pasada posterior: el cliente confirmó
+  la norma general — el schema.org debe usar siempre el teléfono de la
+  caja de información, no el de los botones. Ahora el schema usa
+  +34 919 29 80 50 (el de "Teléfono de información"); los botones
+  siguen apuntando a +34 914 46 85 03 sin cambios, tal como debe ser.
 
 PENDIENTE DE REVISAR:
 - El iframe de Google Maps (sección "Dónde estamos") apunta a una ficha
