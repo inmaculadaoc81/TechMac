@@ -74,21 +74,29 @@
   <button type="button" class="cookie-close" id="cookie-close" aria-label="Cerrar">&times;</button>
 </div>
 <style>
-.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#22262f;color:#fff;padding:20px 56px 20px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;text-align:center;box-shadow:0 -8px 30px rgba(0,0,0,.25);font-family:Arial,Helvetica,sans-serif}
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#22262f;color:#fff;padding:20px 56px 20px 20px;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;text-align:center;box-shadow:0 -8px 30px rgba(0,0,0,.25);font-family:Arial,Helvetica,sans-serif}
+.cookie-banner:not([hidden]){display:flex}
 .cookie-banner p{margin:0;max-width:900px;font-size:13.5px;line-height:1.5;flex:1 1 500px;color:#fff}
 .cookie-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;flex:0 0 auto}
 .cookie-btn{display:inline-block;border:0;background:#1fb6ad;color:#fff!important;font-weight:700;font-size:13.5px;padding:10px 18px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap}
 .cookie-btn:hover{background:#189d95}
-.cookie-close{position:absolute;top:10px;right:14px;background:transparent;border:0;color:#aab0bb;font-size:20px;line-height:1;cursor:pointer;padding:4px}
+.cookie-close{position:absolute;top:10px;right:14px;background:transparent;border:0;color:#aab0bb;font-size:22px;line-height:1;cursor:pointer;padding:6px 8px}
 .cookie-close:hover{color:#fff}
-@media(max-width:700px){.cookie-banner{padding:18px 44px 18px 16px;text-align:left}.cookie-actions{justify-content:flex-start}}
+@media(max-width:700px){
+  .cookie-banner{padding:18px 40px 18px 16px;text-align:left}
+  .cookie-banner p{font-size:12.5px}
+  .cookie-actions{flex-direction:column;align-items:stretch;width:100%}
+  .cookie-btn{width:100%;text-align:center;padding:12px 16px}
+}
 </style>
 <script>
 (function(){
   var KEY='kelatos_cookie_consent';
-  try{ if(localStorage.getItem(KEY)) return; }catch(e){}
   var banner=document.getElementById('cookie-banner');
   if(!banner) return;
+  var already=false;
+  try{ already=!!localStorage.getItem(KEY); }catch(e){}
+  if(already){ banner.hidden=true; return; }
   banner.hidden=false;
   function setConsent(value){
     try{ localStorage.setItem(KEY,value); }catch(e){}
