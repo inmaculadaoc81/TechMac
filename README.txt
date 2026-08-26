@@ -12,9 +12,7 @@ CONTACT_EMAIL=soporte@kelatos.com
 La contraseña NO está incluida en el proyecto.
 
 GOOGLE ANALYTICS:
-No se ha proporcionado un ID específico para TechMac en este turno.
-Por seguridad no se ha reutilizado el ID de AppleTechMac ni inventado uno.
-Añadir el ID correcto antes de producción.
+G-HSL4TYWB2J
 
 DISEÑO:
 One Page, distinto del anterior, centrado en puntos de dolor y preocupaciones reales.
@@ -52,3 +50,32 @@ PENDIENTE DE REVISAR:
   ubicación física con otro nombre de ficha, o un enlace heredado de
   otra marca de la familia. No se ha tocado el src (según la norma de
   mantener los enlaces), pero conviene confirmarlo.
+
+HISTORIAL: el repositorio era multipágina (7 páginas /modelos/ de
+equipos Mac y varias páginas /servicios/) y se convirtió a one-page;
+esas páginas fueron eliminadas en commits anteriores. Como ya no
+existen en el sitemap actual, se ha añadido middleware.mjs para
+redirigir (301) cualquier URL antigua a la home, evitando 404 en
+enlaces indexados o backlinks antiguos. Excluye /api/* y cualquier
+ruta con extensión de archivo. Se añadió "@vercel/functions": "^2.0.3"
+a package.json como dependencia de esta función.
+
+REVISIÓN ADICIONAL (esta pasada):
+- .navcall: el texto largo ("Atención Telefónica 24 horas 365 días")
+  deformaba la píldora del menú de escritorio (el menú móvil ya tenía
+  solo el número). Acortado a solo el número (mismo número,
+  +34 914 46 85 03); no se ha tocado el teléfono informativo distinto
+  (+34 919 29 80 50) que aparece solo como texto en la caja de
+  contacto, tal como está documentado arriba.
+- H1 de portada reescrito, corto, directo y totalmente afirmativo (sin
+  interrogación ni condicionales), incluye "Mac": "Tu Mac no enciende.
+  Lo reparamos y cuidamos tus archivos."
+- CSS del H1: se encontraron dos bloques de estilos que fijaban el
+  tamaño del H1 en móvil de forma contradictoria (un bloque "Ajustes
+  solicitados" que lo reducía a clamp(28-50px) en escritorio y a un
+  flat 28px en móvil, pisando la regla base de clamp(38-60px) y la
+  regla de 38px en el mismo breakpoint 580px). No estaba documentado
+  en este README como una decisión deliberada de tamaño, así que se ha
+  tratado como una regla duplicada/con bug y se ha consolidado en una
+  sola regla, ahora con el tamaño estándar de la familia: clamp(46-
+  74px) en escritorio, 48px en móvil.

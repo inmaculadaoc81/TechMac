@@ -6,6 +6,7 @@
     "node": "24.x"
   },
   "dependencies": {
-    "nodemailer": "^7.0.6"
+    "nodemailer": "^7.0.6",
+    "@vercel/functions": "^2.0.3"
   }
 }
