@@ -5,6 +5,8 @@
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 34px));margin:auto}
 .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.disclaimer-bar{background:#ffce31;color:var(--ink);text-align:center;font-size:12.5px;font-weight:800;padding:8px 16px}
+.privacy-link{color:var(--blue);text-decoration:underline}
 .nav{min-height:76px;display:flex;align-items:center;gap:24px}.logo{width:230px;display:block}.navlinks{margin-left:auto;display:flex;gap:20px;align-items:center;font-size:14px;font-weight:800}.navlinks a:hover{color:var(--blue)}.navcall{background:var(--ink);color:#fff!important;padding:11px 15px;border-radius:999px}
 .menu-btn{display:none;margin-left:auto;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;padding:9px 13px;font-weight:800;font-size:18px;line-height:1;cursor:pointer}
 .mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--line);padding:6px 20px 16px}

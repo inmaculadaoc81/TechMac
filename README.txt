@@ -85,3 +85,22 @@ REVISIÓN ADICIONAL (esta pasada):
   tratado como una regla duplicada/con bug y se ha consolidado en una
   sola regla, ahora con el tamaño estándar de la familia: clamp(46-
   74px) en escritorio, 48px en móvil.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 ya era razonablemente distinto ("no enciende..." vs "no funciona"
+  usado en otros repos); verificado, sin cambios.
+- Verificado: sin elemento .hero-chip/.hero-tag decorativo (no aplica
+  la regla de quitarlo); sin textos decorativos gigantes que se
+  corten en móvil; schema.org ya usaba correctamente el teléfono de
+  la caja de información; formulario correctamente conectado a
+  /api/contact (nombre distinto al habitual "contacto", verificado
+  que coincide exactamente). Sin cambios en ninguno de estos.
+- Añadida franja de aviso de servicio técnico independiente debajo
+  del menú (no existía en ningún sitio del repo).
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Enlace de política de privacidad: la casilla existía pero sin
+  enlace. Añadido a https://kelatos.com/privacy-policy/, en azul y
+  subrayado.
+- Botón "Atención Telefónica..." sin icono, a diferencia del de
+  WhatsApp. Añadido.
