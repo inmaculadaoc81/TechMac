@@ -104,3 +104,12 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente)
   subrayado.
 - Botón "Atención Telefónica..." sin icono, a diferencia del de
   WhatsApp. Añadido.
+
+REVISIÓN ADICIONAL — BUG REAL introducido por mí (a petición del cliente, tras ver captura en vivo):
+- Al añadir el icono al botón "Atención Telefónica..." en el commit
+  anterior, se me olvidó cerrar la etiqueta </a> del botón. Ese HTML
+  mal formado hacía que el navegador interpretara mal el resto del
+  marcado del hero, y la caja de información (.info) dejaba de
+  aparecer en su columna junto al texto — se veía vacío ese lado del
+  hero. Corregido añadiendo el </a> que faltaba. Verificado el
+  balance de etiquetas <a>/</a> en todo el archivo (32/32).
