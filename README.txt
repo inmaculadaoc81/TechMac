@@ -113,3 +113,23 @@ REVISIÓN ADICIONAL — BUG REAL introducido por mí (a petición del cliente, t
   aparecer en su columna junto al texto — se veía vacío ese lado del
   hero. Corregido añadiendo el </a> que faltaba. Verificado el
   balance de etiquetas <a>/</a> en todo el archivo (32/32).
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente — repo 18/48):
+- BUG REAL — enlace de Cal.com desactualizado. Actualizado a
+  https://cal.com/kelatos/30min?embed=true&theme=light&attendeePhoneNumber=%2B34&overlayCalendar=true.
+- Verificado: el correo soporte@kelatos.com no aparece visible.
+- BUG REAL — el mensaje prellenado de WhatsApp decía "¡Hola Kelatos!".
+  Corregido a "¡Hola TechMac!".
+- BUG REAL — el menú móvil (#mobileMenu, estilo atributo hidden) no
+  tenía ningún listener que lo cerrara al pulsar un enlace. Añadido el
+  script estándar de la familia.
+- Verificado: sin iconos ni imágenes con proporciones fijas
+  incorrectas.
+- Verificado: el H1 en móvil ya está en 48px.
+- BUG REAL — botones del hero (.btn) con border-radius de 15px y sin
+  estado hover. Aumentado a border-radius:999px; añadido
+  filter:brightness(.88) en btn-wa/btn-blue (colores sólidos) y
+  relleno sólido con var(--blue) + texto blanco en btn-line (estilo
+  contorno) al pasar el ratón.
+- Verificado: este repo no usa el patrón de franja de insignias bajo
+  el H1 (familia Dyson); no aplica la reubicación.
