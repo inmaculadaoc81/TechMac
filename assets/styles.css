@@ -111,3 +111,4 @@ section{padding:82px 0}.soft{background:#eff7f8}.dark{background:var(--ink);colo
     border-radius:18px;
   }
 }
+.btn-quote:hover{filter:brightness(.88)}
