@@ -145,10 +145,10 @@ REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
   una pasada anterior; no requería cambios.
 
 BLOG:
-El blog vive en /blog. Los artículos son archivos Markdown en content/blog/<slug>.md (con encabezado title, description,
-date, slug, keyword, category, tags, image, imageAlt). En cada despliegue de Vercel, "npm run build" ejecuta
-scripts/build-blog.mjs, que genera blog.html, blog/<slug>.html y sitemap.xml con el mismo diseño y cabecera/pie de la home.
-- Un artículo con "draft: true" o con fecha futura no se publica.
-- Las imágenes van en blog-img/ (se sirven en /blog-img/...).
-- El agente SEO de Kelatos publica añadiendo el .md (y la imagen) a este repositorio; la web se actualiza sola al desplegar.
-- blog/ y blog.html son generados: no se suben al repositorio (.gitignore).
+El blog vive en /blog. Los artículos NO están en este repositorio: los crea y aprueba el agente SEO de Kelatos
+(organización «techmac») y se leen en vivo de la API pública de Kelatos
+(https://db.affirmatechnology.com/kelatos-api/publico/blog?org=techmac), igual que el resto de webs de la familia.
+- api/blog.js genera /blog y /blog/<slug> en el servidor (HTML completo, bueno para Google) usando lib/blog.js.
+- api/sitemap.js genera /sitemap.xml (home + blog + artículos). Vercel guarda las páginas 5 minutos en caché.
+- La cabecera, el pie, las cookies y Analytics se copian de index.html, así que cualquier cambio de la home se refleja en el blog.
+- Estilos del blog: assets/blog.css. No hace falta ningún token ni variable de entorno para el blog.

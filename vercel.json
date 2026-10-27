@@ -1,8 +1,14 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/blog.js": { "includeFiles": "index.html" }
+  },
+  "rewrites": [
+    { "source": "/blog", "destination": "/api/blog" },
+    { "source": "/blog/:slug", "destination": "/api/blog?slug=:slug" },
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" }
+  ],
   "redirects": [
     {
       "source": "/sitemap_index.xml",
@@ -15,7 +21,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!(?:blog|blog-img|package\\.json|sitemap\\.xml|vercel\\.json|index\\.html|README\\.txt|robots\\.txt|_vercel|package|sitemap|assets|README|robots|vercel|index|api)(?:[/.]|$)).+)",
+      "source": "/((?!(?:blog|package\\.json|sitemap\\.xml|vercel\\.json|index\\.html|README\\.txt|robots\\.txt|_vercel|package|sitemap|assets|README|robots|vercel|index|api)(?:[/.]|$)).+)",
       "destination": "/",
       "permanent": true
     }
