@@ -143,3 +143,12 @@ REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
   mantenía fijo/pegado arriba al hacer scroll; no requería cambios.
 - Verificado de nuevo: el checklist de 7 puntos ya estaba aplicado de
   una pasada anterior; no requería cambios.
+
+BLOG:
+El blog vive en /blog. Los artículos son archivos Markdown en content/blog/<slug>.md (con encabezado title, description,
+date, slug, keyword, category, tags, image, imageAlt). En cada despliegue de Vercel, "npm run build" ejecuta
+scripts/build-blog.mjs, que genera blog.html, blog/<slug>.html y sitemap.xml con el mismo diseño y cabecera/pie de la home.
+- Un artículo con "draft: true" o con fecha futura no se publica.
+- Las imágenes van en blog-img/ (se sirven en /blog-img/...).
+- El agente SEO de Kelatos publica añadiendo el .md (y la imagen) a este repositorio; la web se actualiza sola al desplegar.
+- blog/ y blog.html son generados: no se suben al repositorio (.gitignore).
