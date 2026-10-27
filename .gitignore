@@ -1,0 +1,4 @@
+node_modules/
+# páginas generadas por scripts/build-blog.mjs (se crean en cada despliegue)
+/blog/
+/blog.html
